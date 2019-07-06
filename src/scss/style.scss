@@ -12,21 +12,107 @@ $black: #000 !default;
 
 $primary: #ba0c2f;
 $secondary: #a07d84;
+$danger: #7a0920;
 
 $box-shadow: 0 0.1rem 1rem rgba($black, 0.15);
+
+$grid-gutter-width: 20px;
+
+// Cards
+
+$card-spacer-x: 1rem !default;
+$card-border-radius: 0px;
+// $card-border-color: $white;
+$card-cap-bg: $white;
+$card-cap-color: null !default;
+$card-color: null !default;
+$card-bg: $white !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+   //   sm: 540px,
+      // md: 720px,
+      lg: 960px,
+   xl: 1140px
+) !default;
+
+footer {
+   background: $gray-800;
+}
+a.desiner {
+   color: $white;
+   &:hover {
+      color: $primary !important;
+   }
+}
+
+.annotation {
+   background: $gray-100;
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+.article-section {
+   padding-top: 0.5em;
+   padding-bottom: 0.5em;
+}
+.article-section:not(:last-child) {
+   border-bottom: $gray-400 1px dotted;
+}
+
+article:not(:last-child) {
+   margin-bottom: 1.5rem;
+   border-bottom: $gray-400 1px solid;
+}
+.links {
+}
+
+.links > ul {
+}
+
+.links > ul > li {
+   display: inline;
+   padding-right: 1rem;
+   padding-left: 1rem;
+}
+
+.links > ul > li:not(:last-child) {
+   border-right: $gray-300 1px solid;
+   // margin: 0 0.25em;
+}
 
 .page-header-section {
    padding-top: 20px;
    padding-bottom: 12px;
    margin-bottom: 20px;
-   border-bottom: $gray-800 8px solid;
+   border-bottom: $gray-900 8px solid;
 
    .page-title {
       font-size: 2.5em;
       font-weight: bold;
+      line-height: 1.2;
       text-transform: uppercase;
       color: $gray-800;
    }
+}
+
+.navbar-nav > li > a {
+   font-weight: 700;
+   font-size: 1rem;
+
+   &:hover {
+      color: $primary !important;
+      text-decoration: none;
+      border-bottom: $danger 4px solid;
+   }
+}
+
+.navbar-toggler {
+   border: none !important;
+   cursor: pointer;
 }
 
 .navbar-nav,
